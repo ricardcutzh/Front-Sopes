@@ -1,0 +1,16 @@
+{
+  "name": "front-proyecto",
+  "version": "1.0.0",
+  "description": "front y manejo de vistas del proyecto",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "front",
+    "nodejs",
+    "socket"
+  ],
+  "author": "Ricardo Cutz Hernandez",
+  "license": "ISC"
+}
