@@ -1,0 +1,104 @@
+<% include header.ejs %>
+<!--INICIO DE CONTENIDO -->
+<div class="container">
+  <div class="row">
+    <!----------------------------------------->
+    <div class="col-8">
+      <div class="card">
+        <div class="card-header text-center text-white bg-info">
+          <h4><i class="fas fa-hourglass-half"></i> Ultimos Tweets </h4>
+        </div>
+        <br>
+        <div class="container">
+          <div id="tw">
+
+          </div>
+        </div>
+        <br>
+        <div class="card-footer text-muted">
+          Red Social
+        </div>
+      </div>
+    </div>
+    <!----------------------------------------->
+    <div class="col-4">
+      <!----------------------------------------->
+      <div class="row">
+        <div class="col">
+        <div class="card">
+          <div class="card-header text-white text-center bg-info">
+            <h6><i class="fas fa-info-circle"></i> Informacion de Red Social</h6>
+          </div>
+          <div class="card-body">
+            <p><i class="fas fa-users"></i> Total de Usuarios: <div id="tot_users"></div> </p>
+            <p><i class="fab fa-twitter-square"></i> Total de Tweets: <div id="tot_tweets"></div> </p>
+            <p><i class="fas fa-list"></i> Total de Categorias: <div id="tot_categos"></div> </p>
+          </div>
+          <div class="card-footer text-muted">
+
+          </div>
+        </div>
+        </div>
+      </div>
+      <!----------------------------------------->
+      <br>
+      <!----------------------------------------->
+      <div class="row">
+        <div class="col">
+        <div class="card ">
+          <div class="card-header text-white text-center bg-info">
+            <h6><i class="fab fa-twitter"></i> Tweets Populares de Red Social</h6>
+          </div>
+          <div class="card-body">
+            <p><i class="fas fa-users"></i> Usuario con Mas tweets: <div id="us_mas_tweets"></div></p>
+            <p><i class="fas fa-list"></i> Categoria Mas Popular: <div id="catgo_mas_tweets"></div></p>
+          </div>
+          <div class="card-footer text-muted">
+
+          </div>
+        </div>
+        </div>
+      </div>
+      <!----------------------------------------->
+      <br>
+      <!----------------------------------------->
+      <div class="row">
+        <div class="col">
+        <div class="card ">
+          <div class="card-header text-white text-center bg-info">
+            <h6><i class="fab fa-twitter"></i> Consultar</h6>
+          </div>
+          <div class="card-body">
+            <form class="" action="/usuarios" method="post">
+              <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" class="form-control" required name="alias" placeholder="Alias del Usuario">
+                <br>
+                <button type="submit" class="btn btn-outline-info btn-block">Consultar</button>
+              </div>
+            </form>
+            <br>
+            <form class="" action="/categorias" method="post">
+              <div class="form-group">
+                <label for="categoria">Categoria</label>
+                <input type="text" class="form-control" required name="nombre" placeholder="Nombre de Categoria">
+                <br>
+                <button type="submit" class="btn btn-outline-info btn-block">Consultar</button>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer text-muted">
+
+          </div>
+        </div>
+        </div>
+      </div>
+      <!----------------------------------------->
+      <br>
+    </div>
+  </div>
+</div>
+<!--FIN DE CONTENIDO-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script src="/static/js/tweets.js"></script>
+<% include footer.ejs %>

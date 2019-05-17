@@ -1,0 +1,45 @@
+<% include header.ejs %>
+<!--INICIO DE CONTENIDO -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header text-white text-center bg-info">
+          <h4>Informacion </h4>
+        </div>
+        <div class="card-body">
+          <p>Alias: <input disabled class="form-control" id="alias" value = "<%= alias%>"/></p>
+          <p>Nombre: <div   id='uno'> </div> </p>
+          <p>Tweets: <div   id='dos'> </div> </p>
+        </div>
+        <div class="card-footer text-muted">
+          Red Social
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header text-white text-center bg-info">
+          <h4>Ultimos Tweets </h4>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div id="tws">
+
+            </div>
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--FIN DE CONTENIDO -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script src="/static/js/usuarios.js"></script>
+<% include footer.ejs %>
